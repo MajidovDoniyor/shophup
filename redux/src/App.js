@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { qushish, ayirish } from "./redux/counter";
-import { textGet } from "./redux/text";
+import { qushish, ayirish } from "./redux/action/counter";
+import { textGet } from "./redux/action/text";
 
 const App = () => {
   const data = useSelector((store) => store.counter);
