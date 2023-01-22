@@ -23,13 +23,14 @@ export const crudPost = createAsyncThunk(
 );
 
 export const crudPut = createAsyncThunk(
-  "cruddelete",
+  "crudPut",
   async (data, { dispatch }) => {
     await axios.put(`${url}/${data.id}`, data.data).then((res) => {
       dispatch(crudGet());
     });
   }
 );
+
 export const crudDelete = createAsyncThunk(
   "cruddelete",
   async (id, { dispatch }) => {

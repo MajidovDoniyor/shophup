@@ -17,8 +17,10 @@ const Crud = () => {
       name: name,
       age: age,
     };
-    if (id > 0) dispatch(crudPut({ id, data: { name, age } }));
-    else dispatch(crudPost(datas));
+    if (id > 0) {
+      dispatch(crudPut({ id, data: { name, age } }));
+      setid(-1);
+    } else dispatch(crudPost(datas));
     setname("");
     setage("");
   };
